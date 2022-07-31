@@ -1,0 +1,34 @@
+<html>
+  <head>
+    <title>stackotter's vault</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>stackotter's vault</h1>
+    <p>This vault guards my deepest secret, that's why I made it so secure!</p>
+    <form onsubmit="login(event)">
+      <input placeholder="password" id="password"/>
+      <button type="submit">Submit</button>
+    </form>
+    <p style="color:red" id="error"></p>
+
+    <script>
+      var passwordInput = document.getElementById("password");
+      var error = document.getElementById("error");
+      function login(e) {
+        if (passwordInput.value == "y0u11_n3v3r_gu3s5_th15_0n3_c4u53_i7_h4s_s0_m4ny_numb3r5") {
+          window.location.href = "/flag.html";
+        } else {
+          passwordInput.value = "";
+          error.textContent = "access denied";
+        }
+        console.log("hi");
+        e.preventDefault();
+      }
+    </script>
+  </body>
+</html>
