@@ -1,0 +1,91 @@
+<html>
+  <head>
+    <title>stackotter's blog</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+
+      body {
+        margin-bottom: 32px;
+      }
+
+      .ad {
+        display: inline-block;
+        padding: 100px 200px;
+        border: 1px solid black;
+        margin: auto;
+        margin-top: 8px;
+      }
+
+      .comment {
+        display: inline-block;
+        margin-left: 16px;
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      .comment-author {
+        color: gray;
+        margin-left: 8px;
+        margin-top: 8px;
+      }
+
+      form {
+        border: 1px solid gray;
+        padding: 8px;
+        margin-left: 8px;
+      }
+
+      form input {
+        display: block;
+        margin-bottom: 8px;
+      }
+
+      hr {
+        width: 500px;
+        color: gray;
+        margin-left: 8px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Amazing cheesecake simple 5 minute recipe</h1>
+
+    <h2>Introduction</h2>
+    <p>This is my grandma's recipe and every time I think of my grandma I think of the recipe because it was her recipe. And that is why when I think of her, the recipe is also what I think of.</p>
+    <div class="ad">Ad</div><br>
+    <div class="ad">Ad</div><br>
+    <div class="ad">Ad</div><br>
+
+    <h2>Recipe</h2>
+    <ol>
+      <li>Get cheese</li>
+      <li>Get cake</li>
+      <li>Try and combine them</li>
+      <li>It doesn't work</li>
+      <li>Give up</li>
+    </ol>
+
+    <h2>Conclusion</h2>
+    <p>It's a very effective recipe and it will wow your guests.</p>
+    <p>Leave a comment with any feedback you have. I even enabled html so that you can make your comments look nice!</p>
+
+    <h2>Leave a comment</h2>
+    <form method="post" action="add-comment">
+      <input name="content" placeholder="comment">
+      <input name="author" placeholder="name">
+      <button type="submit">Submit</button>
+    </form>
+
+    <h2>Comments</h2>
+    <hr>
+    {% for comment in comments %}
+      <div class="comment">
+        <div class="comment-content">{{ comment["content"]|safe }}</div>
+        <div class="comment-author">- {{ comment["author"] }}</div>
+      </div>
+      <hr>
+    {% endfor %}
+  </body>
+</html>

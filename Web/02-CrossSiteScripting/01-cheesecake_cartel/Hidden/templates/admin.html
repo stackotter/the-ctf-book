@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <title>Admin</title>
+    <style>
+      html {
+        font-family: sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Admin</h1>
+    Logged in as: stackotter
+    <h2>Flag management</h2>
+    <button id="flag-revealer">show</button>
+    <p id="flag"></p>
+    <script>
+      var button = document.getElementById("flag-revealer");
+      var flag = document.getElementById("flag");
+      button.addEventListener("click", e => {
+        flag.innerHTML = "Flag: <pre>flag{al1_i_w4n73d_w4s_t0_h4v3_pr3t7y_c0mm3n75}</pre>";
+        button.textContent = button.textContent == "show" ? "hide" : "show"
+      })
+    </script>
+  </body>
+</html>
