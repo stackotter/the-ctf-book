@@ -5,20 +5,43 @@
       html {
         font-family: sans-serif;
       }
+
+      .mono {
+        font-family: monospace;
+      }
+
+      #flag {
+        margin-left: 8px;
+      }
     </style>
   </head>
   <body>
-    <h1>Admin</h1>
-    Logged in as: stackotter
+    <h1>Admin (Logged in as stackotter)</h1>
+
+    <h2>Cartel management</h2>
+    <button id="hitlist-button">View hitlist</button>
+    <p>Note to self: maybe add those pesky hackers to the list, they are too close to figuring out my secret</p>
+
     <h2>Flag management</h2>
-    <button id="flag-revealer">show</button>
-    <p id="flag"></p>
+    <button id="flag-button">View flag</button>
+    <span id="flag"></span>
+
     <script>
-      var button = document.getElementById("flag-revealer");
+      var flagButton = document.getElementById("flag-button");
       var flag = document.getElementById("flag");
-      button.addEventListener("click", e => {
-        flag.innerHTML = "Flag: <pre>flag{al1_i_w4n73d_w4s_t0_h4v3_pr3t7y_c0mm3n75}</pre>";
-        button.textContent = button.textContent == "show" ? "hide" : "show"
+      flagButton.addEventListener("click", e => {
+        if (flagButton.textContent == "View flag") {
+          flag.innerHTML = "Flag: <span class='mono'>flag{al1_i_w4n73d_w4s_t0_h4v3_pr3t7y_c0mm3n75}</span>";
+          flagButton.textContent = "Hide flag";
+        } else {
+          flag.innerHTML = "";
+          flagButton.textContent = "View flag";
+        }
+      })
+
+      var hitlistButton = document.getElementById("hitlist-button");
+      hitlistButton.addEventListener("click", e => {
+        window.location.href = "https://www.youtube.com/watch?v=xvFZjo5PgG0";
       })
     </script>
   </body>

@@ -1,0 +1,4 @@
+Flask
+selenium
+webdriver-manager
+flask-cors

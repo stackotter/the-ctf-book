@@ -4,13 +4,14 @@ from selenium import webdriver
 from time import sleep
 import threading
 
-run_browser_headless = True
+run_browser_headless = False
 
 admin_session = "YWxtb3N0IHRoZXJlIQ=="
-comments = [{
+initial_comment = {
   "content": "<b>Hello internet!</b>",
   "author": "stackotter's grandma"
-}]
+}
+comments = [initial_comment]
 
 chrome_options = webdriver.ChromeOptions()
 if run_browser_headless:
@@ -30,6 +31,11 @@ def visit_recipe_as_admin():
   except:
     driver.refresh()
   return
+
+def comment_cleanup_loop():
+  while True:
+    sleep(60 * 5)
+    comments = [initial_comment]
 
 app = Flask(__name__)
 
@@ -57,7 +63,7 @@ def add_comment():
   return redirect("/")
 
 def run_app():
-  app.run("0.0.0.0", port=8083)
+  app.run("0.0.0.0", port=8083, debug=True)
 
 driver_thread = threading.Thread(target=setup_driver)
 driver_thread.start()
