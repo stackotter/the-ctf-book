@@ -4,7 +4,7 @@ from selenium import webdriver
 from time import sleep
 import threading
 
-run_browser_headless = False
+run_browser_headless = True
 
 admin_session = "YWxtb3N0IHRoZXJlIQ=="
 initial_comment = {
@@ -33,6 +33,7 @@ def visit_recipe_as_admin():
   return
 
 def comment_cleanup_loop():
+  global comments
   while True:
     sleep(60 * 5)
     comments = [initial_comment]
@@ -63,7 +64,7 @@ def add_comment():
   return redirect("/")
 
 def run_app():
-  app.run("0.0.0.0", port=8083, debug=True)
+  app.run("0.0.0.0", port=8083)
 
 driver_thread = threading.Thread(target=setup_driver)
 driver_thread.start()
