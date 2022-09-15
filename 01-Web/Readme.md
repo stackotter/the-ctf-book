@@ -9,11 +9,11 @@ to look inside until you have solved the challenge.
 
 - A computer with `python3` installed
 
-## Lessons
+## Lessons and associated challenges
 
-- **[Introduction](01-Introduction/Lesson.md)**: A taster of the hidden inner workings of the internet that most people never see
-  - **[vault](01-Introduction/01-vault/Readme.md)**: A simple clientside authentication challenge.
-- **[Cross site scripting](02-CrossSiteScripting/Lesson.md)**: An introduction to one of the first classes of web vulnerabilities to be
+1. **[Introduction](01-Introduction/Lesson.md)**: A taster of the hidden inner workings of the internet that most people never see
+  1. **[vault](01-Introduction/01-vault/Readme.md)**: A simple clientside authentication challenge.
+2. **[Cross site scripting](02-CrossSiteScripting/Lesson.md)**: An introduction to one of the first classes of web vulnerabilities to be
   exploited
-  - **[cheesecake_cartel](02-CrossSiteScripting/01-cheesecake_cartel/Readme.md)**: A classic cross-site scripting challenge that will require a bit of
+  1. **[cheesecake_cartel](02-CrossSiteScripting/01-cheesecake_cartel/Readme.md)**: A classic cross-site scripting challenge that will require a bit of
     thinking to solve
