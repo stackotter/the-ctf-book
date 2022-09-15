@@ -5,7 +5,7 @@
 The installer for Docker Desktop is hosted on [the downloads page](https://www.docker.com/products/docker-desktop/).
 How you use the installer depends on which operating system you use.
 
-## What is Docker
+## What is Docker?
 
 Docker is a system for running lightweight containers. Each container is a Linux operating system
 that runs on your computer, and all of the containers can have different configuration, installed

@@ -114,7 +114,7 @@ basics that you'll need to know for you first few challenges.
 ## Your first web hacking challenge
 
 Now that you've got a basic idea of how a website works, let's try and hack one. The first challenge
-you will be solving is called `vault`. Looking at the readme gives us description for the challenge
+you will be solving is called `vault`. Looking at the readme gives us a description for the challenge
 (Figure 1.5).
 
 > stackotter has stored their deepest secret in a high security vault. Can you find out what it is?
